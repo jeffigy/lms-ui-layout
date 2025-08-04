@@ -17,7 +17,7 @@ const LoginScreen = () => {
           <FormControlLabelText>Email</FormControlLabelText>
         </FormControlLabel>
         <Input size="xl">
-          <InputField type="text" />
+          <InputField type="text" keyboardType="email-address" />
         </Input>
       </FormControl>
       <FormControl className="w-full">
@@ -25,7 +25,7 @@ const LoginScreen = () => {
           <FormControlLabelText>Password</FormControlLabelText>
         </FormControlLabel>
         <Input size="xl">
-          <InputField type="text" />
+          <InputField type="password" secureTextEntry={true} />
         </Input>
       </FormControl>
       <Link href={"/(tabs)"} asChild>
