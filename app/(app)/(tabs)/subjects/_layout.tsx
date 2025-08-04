@@ -15,8 +15,15 @@ const SubjectLayout = () => {
             fontSize: 30,
             fontWeight: "bold",
           },
+
+          headerStyle: {
+            backgroundColor: "#f9f9f9",
+            elevation: 0,
+            shadowOpacity: 0,
+          },
+
           headerRight: ({ tintColor }) => (
-            <Link href={"/"}>
+            <Link href={"/(app)/profile"}>
               <CircleUserRound color={tintColor} />
             </Link>
           ),

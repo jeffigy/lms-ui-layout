@@ -13,17 +13,21 @@ const SubjectLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        headerTitleAlign: "left",
-        headerTitleStyle: {
-          fontSize: 30,
-          fontWeight: "bold",
-        },
-
         headerLeft: ({ tintColor }) => (
           <Pressable onPress={() => router.back()}>
             <ChevronLeft color={tintColor} />
           </Pressable>
         ),
+
+        headerTitleAlign: "left",
+        headerShadowVisible: false,
+        headerTitleStyle: {
+          fontSize: 30,
+          fontWeight: "bold",
+        },
+
+        tabBarActiveTintColor: "#135da0",
+        tabBarInactiveTintColor: "#cad5e2",
 
         tabBarStyle: {
           backgroundColor: "#f9f9f9",

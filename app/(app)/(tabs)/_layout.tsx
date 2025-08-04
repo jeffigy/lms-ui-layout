@@ -33,7 +33,7 @@ const TabsLayout = () => {
           shadowOpacity: 0,
         },
         headerRight: ({ tintColor }) => (
-          <Link href={"/"}>
+          <Link href={"/(app)/profile"}>
             <CircleUserRound color={tintColor} />
           </Link>
         ),

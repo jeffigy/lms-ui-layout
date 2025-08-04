@@ -6,6 +6,7 @@ const AuthenticatedLayout = () => {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="(tabs)" />
       <Stack.Screen name="(subject)/[id]" />
+      <Stack.Screen name="profile" />
     </Stack>
   );
 };

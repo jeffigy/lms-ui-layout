@@ -1,4 +1,5 @@
 import subjects from "@/assets/data.json";
+import Container from "@/components/container";
 import { Link } from "expo-router";
 import React from "react";
 import { Text, View } from "react-native";
@@ -6,7 +7,7 @@ import { FlatList, Pressable } from "react-native-gesture-handler";
 
 const SubjectsScreen = () => {
   return (
-    <View>
+    <Container>
       <FlatList
         className="m-5"
         data={subjects}
@@ -42,7 +43,7 @@ const SubjectsScreen = () => {
           </Link>
         )}
       />
-    </View>
+    </Container>
   );
 };
 

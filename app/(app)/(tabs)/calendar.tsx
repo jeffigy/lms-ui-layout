@@ -1,11 +1,12 @@
+import Container from "@/components/container";
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
 
 const CalendarScreen = () => {
   return (
-    <View>
+    <Container>
       <Text>CalendarScreen</Text>
-    </View>
+    </Container>
   );
 };
 

@@ -2,12 +2,12 @@ import Container from "@/components/container";
 import React from "react";
 import { Text } from "react-native";
 
-const ActivitiesScreen = () => {
+const GradesScreen = () => {
   return (
     <Container>
-      <Text>ActivitiesScreen</Text>
+      <Text>GradesScreen</Text>
     </Container>
   );
 };
 
-export default ActivitiesScreen;
+export default GradesScreen;
