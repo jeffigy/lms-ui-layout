@@ -17,7 +17,7 @@ const TabsLayout = () => {
 
         headerTitleStyle: {
           fontSize: 30,
-          fontWeight: "medium",
+          fontWeight: "bold",
         },
 
         tabBarStyle: {
@@ -59,6 +59,7 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="subjects"
         options={{
+          headerShown: false,
           tabBarIcon: ({ color }) => <BookOpen color={color} />,
           headerTitle: "Subjects",
           tabBarLabel: "",
