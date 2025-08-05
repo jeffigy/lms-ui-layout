@@ -1,6 +1,5 @@
-import { Link } from "expo-router";
+import ProfileButton from "@/components/profile-button";
 import { Drawer } from "expo-router/drawer";
-import { CircleUserRound } from "lucide-react-native";
 import React from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
@@ -10,23 +9,19 @@ const SubjectLayout = () => {
       <Drawer
         screenOptions={{
           headerTitleAlign: "left",
-
           headerTitleStyle: {
             fontSize: 30,
             fontWeight: "bold",
           },
-
           headerStyle: {
             backgroundColor: "#f9f9f9",
             elevation: 0,
             shadowOpacity: 0,
           },
-
-          headerRight: ({ tintColor }) => (
-            <Link href={"/(app)/profile"}>
-              <CircleUserRound color={tintColor} />
-            </Link>
-          ),
+          headerRight: ({ tintColor }) => <ProfileButton color={tintColor} />,
+          drawerItemStyle: {
+            borderRadius: 10,
+          },
         }}
       >
         <Drawer.Screen

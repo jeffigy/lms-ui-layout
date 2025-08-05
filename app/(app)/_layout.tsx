@@ -5,7 +5,7 @@ const AuthenticatedLayout = () => {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="(tabs)" />
-      <Stack.Screen name="(subject)/[id]" />
+      <Stack.Screen name="(subject)" />
       <Stack.Screen name="profile" />
     </Stack>
   );

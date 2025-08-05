@@ -1,11 +1,12 @@
+import Container from "@/components/container";
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
 
 const StudentsScreen = () => {
   return (
-    <View>
+    <Container>
       <Text>StudentsScreen</Text>
-    </View>
+    </Container>
   );
 };
 

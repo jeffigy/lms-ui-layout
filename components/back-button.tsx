@@ -8,7 +8,11 @@ const BackButton = ({ color }: { color: string | undefined }) => {
 
   return (
     <Pressable onPress={() => router.back()}>
-      <ChevronLeft color={color} style={{ marginHorizontal: 12 }} />
+      <ChevronLeft
+        color={color}
+        size={30}
+        // style={{ marginHorizontal: 12 }}
+      />
     </Pressable>
   );
 };

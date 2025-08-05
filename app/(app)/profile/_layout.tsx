@@ -1,7 +1,6 @@
+import BackButton from "@/components/back-button";
 import { Stack, useRouter } from "expo-router";
-import { ChevronLeft } from "lucide-react-native";
 import React from "react";
-import { Pressable } from "react-native";
 
 const ProfileLayout = () => {
   const router = useRouter();
@@ -12,12 +11,7 @@ const ProfileLayout = () => {
         headerStyle: {
           backgroundColor: "#f9f9f9",
         },
-
-        headerLeft: ({ tintColor }) => (
-          <Pressable onPress={() => router.back()}>
-            <ChevronLeft color={tintColor} />
-          </Pressable>
-        ),
+        headerLeft: ({ tintColor }) => <BackButton color={tintColor} />,
       }}
     >
       <Stack.Screen name="index" />

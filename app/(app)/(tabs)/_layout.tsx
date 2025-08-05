@@ -1,9 +1,9 @@
-import { Link, Tabs } from "expo-router";
+import ProfileButton from "@/components/profile-button";
+import { Tabs } from "expo-router";
 import {
   Bell,
   BookOpen,
   Calendar,
-  CircleUserRound,
   Home,
   MessageCircle,
 } from "lucide-react-native";
@@ -32,11 +32,7 @@ const TabsLayout = () => {
           elevation: 0,
           shadowOpacity: 0,
         },
-        headerRight: ({ tintColor }) => (
-          <Link href={"/(app)/profile"}>
-            <CircleUserRound color={tintColor} />
-          </Link>
-        ),
+        headerRight: ({ tintColor }) => <ProfileButton color={tintColor} />,
       }}
     >
       <Tabs.Screen
@@ -44,7 +40,7 @@ const TabsLayout = () => {
         options={{
           tabBarIcon: ({ color }) => <Home color={color} />,
           headerTitle: "HCCCI",
-          tabBarLabel: "",
+          tabBarLabel: "Home",
         }}
       />
 
@@ -53,7 +49,7 @@ const TabsLayout = () => {
         options={{
           tabBarIcon: ({ color }) => <Calendar color={color} />,
           headerTitle: "Calendar",
-          tabBarLabel: "",
+          tabBarLabel: "Calendar",
         }}
       />
       <Tabs.Screen
@@ -62,7 +58,7 @@ const TabsLayout = () => {
           headerShown: false,
           tabBarIcon: ({ color }) => <BookOpen color={color} />,
           headerTitle: "Subjects",
-          tabBarLabel: "",
+          tabBarLabel: "Subjects",
         }}
       />
       <Tabs.Screen
@@ -70,7 +66,7 @@ const TabsLayout = () => {
         options={{
           tabBarIcon: ({ color }) => <MessageCircle color={color} />,
           headerTitle: "Messages",
-          tabBarLabel: "",
+          tabBarLabel: "Messages",
         }}
       />
 
@@ -79,7 +75,7 @@ const TabsLayout = () => {
         options={{
           tabBarIcon: ({ color }) => <Bell color={color} />,
           headerTitle: "Notifications",
-          tabBarLabel: "",
+          tabBarLabel: "Notifications",
         }}
       />
     </Tabs>

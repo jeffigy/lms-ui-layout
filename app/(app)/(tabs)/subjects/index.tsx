@@ -1,47 +1,20 @@
-import subjects from "@/assets/data.json";
+import subjectsData from "@/assets/data.json";
 import Container from "@/components/container";
-import { Link } from "expo-router";
+import Subject from "@/features/subjects/subject/Subject";
+import { SubjectType } from "@/types/subject";
 import React from "react";
-import { Text, View } from "react-native";
-import { FlatList, Pressable } from "react-native-gesture-handler";
+import { FlatList } from "react-native-gesture-handler";
+
+const subjects = subjectsData as SubjectType[];
 
 const SubjectsScreen = () => {
   return (
     <Container>
       <FlatList
-        className="m-5"
+        showsVerticalScrollIndicator={false}
         data={subjects}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <Link
-            href={{
-              pathname: "/(app)/(subject)/[id]", // ✅ string literal — not backticks
-              params: { id: item.id },
-            }}
-            asChild
-          >
-            <Pressable
-              style={{
-                padding: 10,
-                backgroundColor: "#fff",
-                marginBottom: 10,
-                borderRadius: 10,
-                elevation: 2,
-                gap: 10,
-              }}
-            >
-              <View>
-                <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-                  {item.name}
-                </Text>
-                <Text style={{ fontSize: 12, fontWeight: "300" }}>
-                  {item.teacher}
-                </Text>
-              </View>
-              <Text style={{ fontSize: 16 }}>{item.room}</Text>
-            </Pressable>
-          </Link>
-        )}
+        keyExtractor={(subject: SubjectType) => subject.id.toString()}
+        renderItem={({ item }) => <Subject subject={item} />}
       />
     </Container>
   );
